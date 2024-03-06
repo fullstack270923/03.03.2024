@@ -68,7 +68,7 @@ async function insertRow(new_employee) {
 ///////////////// PUT-PATCH
 async function updateRow(updated_employee, id) {
     await data_base.raw(`UPDATE company set name=?,age=?,address=?,salary=? where id=?`,
-        [new_employee.name, new_employee.age, new_employee.address, new_employee.salary, id])
+        [updated_employee.name, updated_employee.age, updated_employee.address, updated_employee.salary, id])
 }
 ///////////////// DELETE
 async function deleteRow(id) {
@@ -83,7 +83,7 @@ async function get_by_id(id) {
 let finished = false;
 //delete_table()
 //create_table()
- //insert_rows_for_company()
+insert_rows_for_company()
 // get_all()
 
  //const new_employee = { name: 'David27', age: 27, address: 'Texas', salary: 85000 }
